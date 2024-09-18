@@ -1,4 +1,4 @@
-import { log } from 'console';
+
 import express from 'express'
 
 const app = express();
@@ -11,7 +11,7 @@ function check(req, res, next){
     req.reqCount = reqCount;
     next();
 }
-
+   
 app.get("/sum",check , function(req, res) {
     const a = req.query.a;
     const b = req.query.b;
