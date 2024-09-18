@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></Script>
+    
+</head>
+<body>
+    <input type="text" id="a" placeholder="first value">
+    <input type="text" id="b" placeholder="second value">
+    <button onclick="sendRequest()">Find one</button>
+    <script>
+        function sendRequest(){
+          axios.post("http://localhost:3000/sum", {
+            a: document.querySelector("#a").value,
+            b: document.querySelector("#b").value
+          }) 
+        }
+    </script>
+
+</body>
+</html>
